@@ -15,18 +15,21 @@ console.log("port no ==> ", PORT)
 
 app.get("/", (req, res) => {
 
-    //sync
+    //sync way : write to a file
+
+    //syntax : fs.writeFileSync(file, data)
 
     fs.writeFileSync("./sample.txt", "1")
     fs.writeFileSync("./sample.txt", "2")// over writes the previous value : 1
 
 
-    //async
+    //async way to write : cb is present
     fs.writeFile("./sample.txt", "3 ", (err) => {
         //It only returns err in the callback.
         if (err) {
             console.error("Error writing file:", err);
         } else {
+            // read file sync way
             const result = fs.readFileSync("./sample.txt", "utf-8")
             console.log("result of synchronously reading 1==>", result)
 
