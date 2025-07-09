@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     //sync
 
     fs.writeFileSync("./sample.txt", "1")
-    fs.writeFileSync("./sample.txt", "2")// over writes the previous : 2
+    fs.writeFileSync("./sample.txt", "2")// over writes the previous value : 1
 
 
     //async
