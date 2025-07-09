@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
     //async way to write : cb is present
 
     fs.writeFile("./sample.txt", "3 ", (err) => {
-        //It only returns err in the callback.
+        //It only returns err and no data in the callback.
         if (err) {
             console.error("Error writing file:", err);
         } else {
