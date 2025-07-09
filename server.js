@@ -59,7 +59,7 @@ app.get("/", (req, res) => {
     // asynchronously reading : expects a cb
 
     fs.readFile("./sample.txt", "utf-8", (err, data) => { // need cb to get data
-        //It only returns err in the callback.
+        //It  returns both  err and data in the callback.
         if (err) {
             console.error("Error reading file:", err);
         } else {
