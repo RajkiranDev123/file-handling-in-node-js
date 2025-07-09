@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
 
 
     //async way to write : cb is present
+
     fs.writeFile("./sample.txt", "3 ", (err) => {
         //It only returns err in the callback.
         if (err) {
@@ -37,7 +38,7 @@ app.get("/", (req, res) => {
 
             fs.appendFileSync("./sample.txt", new Date().getDate().toLocaleString())
 
-            //copy
+            //copy file
             fs.cpSync("./sample.txt","./sample2.txt")
 
             //delete
@@ -50,9 +51,9 @@ app.get("/", (req, res) => {
     })
 
 
-    // read
+    // read files sync way
 
-    const result = fs.readFileSync("./sample.txt", "utf-8")
+    const result = fs.readFileSync("./sample.txt", "utf-8") // gives you result instantly
     console.log("result of synchronously reading==>", result)
 
     // asynchronously reading : expects a cb
