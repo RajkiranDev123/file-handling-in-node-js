@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
         if (err) {
             console.error("Error writing file:", err);
         } else {
-            // read file sync way 
+            // read file sync way : utf-8 is imp otherwise will get raw stream
             const result = fs.readFileSync("./sample.txt", "utf-8")
             console.log("result of synchronously reading 1==>", result)
 
