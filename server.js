@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
         if (err) {
             console.error("Error writing file:", err);
         } else {
-            // read file sync way
+            // read file sync way 
             const result = fs.readFileSync("./sample.txt", "utf-8")
             console.log("result of synchronously reading 1==>", result)
 
