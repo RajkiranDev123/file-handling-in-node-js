@@ -63,13 +63,9 @@ app.get("/", (req, res) => {
         if (err) {
             console.error("Error reading file:", err);
         } else {
-
             console.log("data from async read ==>", data)
         }
     })
-
-
-
 
 })
 
